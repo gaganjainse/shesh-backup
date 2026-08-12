@@ -1,4 +1,4 @@
-"""MCP server exposing shesha-backup."""
+"""MCP server exposing shesh-backup."""
 from __future__ import annotations
 
 import json
@@ -6,7 +6,7 @@ import json
 from mcp.server.fastmcp import FastMCP
 
 try:
-    from shesha_audit.mcp_guard import GuardedMCP as _MCP
+    from shesh_audit.mcp_guard import GuardedMCP as _MCP
 except ImportError:  # audit not installed; fall back to plain FastMCP
     _MCP = FastMCP
 
@@ -20,7 +20,7 @@ from .backup import (
 )
 from .runner import run as _run
 
-mcp = _MCP("shesha-backup")
+mcp = _MCP("shesh-backup")
 
 STATE_PATH = DATA_DIR / "state.json"
 CONFIG_PATH = DATA_DIR / "config.json"

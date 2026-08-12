@@ -1,4 +1,4 @@
-"""Offline tests for shesha-backup (no restic/network needed)."""
+"""Offline tests for shesh-backup (no restic/network needed)."""
 from __future__ import annotations
 
 import sys
@@ -6,14 +6,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from shesha_backup.backup import (  # noqa: E402
+from shesh_backup.backup import (  # noqa: E402
     BackupConfig,
     BackupState,
     backup,
     prune,
     should_run,
 )
-from shesha_backup.runner import Result  # noqa: E402
+from shesh_backup.runner import Result  # noqa: E402
 
 
 def make_runner(backup_ok=True, snapshots="[]"):

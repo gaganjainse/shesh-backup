@@ -9,7 +9,10 @@ from pathlib import Path
 
 from .runner import Result, run
 
-DATA_DIR = Path.home() / ".local" / "state" / "shesha" / "backup"
+DATA_DIR = Path.home() / ".local" / "state" / "shesh" / "backup"
+_LEGACY = Path.home() / ".local" / "state" / "shesha" / "backup"
+if _LEGACY.exists() and not DATA_DIR.exists():
+    _LEGACY.rename(DATA_DIR)  # one-shot migration; legacy name is gone
 
 
 @dataclass

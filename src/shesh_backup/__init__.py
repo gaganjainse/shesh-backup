@@ -1,4 +1,4 @@
-"""shesha-backup: local, verified restic backups.
+"""shesh-backup: local, verified restic backups.
 
 Wraps restic with a safe default policy: only run when on AC, respect a daily
 schedule written to state, verify snapshots, and never auto-forget/prune without
