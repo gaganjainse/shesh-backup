@@ -1,4 +1,4 @@
-"""Subprocess wrapper, isolated for tests."""
+"""Subprocess wrapper, isolated for tests. Vendored twin of shesh-skills' runner.py (dedupe policy: tiny stdlib shims stay vendored; see ADR-0018)."""
 from __future__ import annotations
 
 import subprocess
